@@ -4,7 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js}": [
+      "eslint --config eslint.config.mjs"
+    ],
+    "src/**/*.{ts,tsx,js,json,html,css,less,scss,md}": [
+      "prettier --write"
+    ]
   },
   "keywords": [],
   "author": "Chen",
@@ -14,12 +23,16 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@eslint/js": "^9.16.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "eslint": "^9.16.0",
     "eslint-plugin-react": "^7.37.2",
     "globals": "^15.13.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.4.2",
     "typescript-eslint": "^8.17.0"
   }
