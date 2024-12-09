@@ -2,7 +2,7 @@ import globals from 'globals'
 import pluginJs from '@eslint/js'
 import tsEslint from 'typescript-eslint'
 import pluginReact from 'eslint-plugin-react'
-import jsx from 'react/jsx-runtime'
+// import jsx from 'react/jsx-runtime'
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -15,7 +15,7 @@ export default [
   ...tsEslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   //配置
-  jsx.configs.recommended,
+  // jsx.configs.recommended,
 
   {
     rules: {

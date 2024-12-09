@@ -1,4 +1,5 @@
-function App() {
-  return <h2>我的</h2>
+import React from 'react'
+
+export default function App() {
+  return <h2>我的APP</h2>
 }
-export default App
