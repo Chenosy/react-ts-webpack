@@ -14,6 +14,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react", // react18这里也可以改成react-jsx
+    // 使用 @/xxx.xx,就会指向项目中src/xxx.xx
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["./src"]
 }

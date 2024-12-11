@@ -18,4 +18,6 @@ module.exports = merge(baseConfig, {
   },
   // 添加热更新插件
   plugins: [new ReactRefreshWebpackPlugin()],
+  // webpack提供的选择源码映射方式的配置
+  devtool: 'eval-cheap-module-source-map'
 })
