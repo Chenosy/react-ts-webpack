@@ -38,7 +38,7 @@
   },
   //eslint 由编辑器支持是有自动修复功能
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-  // "typescript.tsdk": "./node_modules/typescript/lib", // 代替 vscode 的 ts 语法智能提示
+  "typescript.tsdk": "./node_modules/typescript/lib", // 代替 vscode 的 ts 语法智能提示
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
   }
