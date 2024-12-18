@@ -10,19 +10,19 @@
 
 ### 2.1 代码格式规范和语法检测
 
-1.  [vscode](https://link.juejin.cn?target=http%3A%2F%2Fvscode.bianjiqi.net%2F "http://vscode.bianjiqi.net/")：统一前端编辑器。
-1.  [editorconfig](https://link.juejin.cn?target=https%3A%2F%2Feditorconfig.org%2F "https://editorconfig.org/"): 统一团队vscode编辑器默认配置。
-1.  [prettier](https://link.juejin.cn?target=https%3A%2F%2Fwww.prettier.cn%2F "https://www.prettier.cn/"): 保存文件自动格式化代码。
-1.  [eslint](https://link.juejin.cn?target=https%3A%2F%2Feslint.bootcss.com%2F "https://eslint.bootcss.com/"): 检测代码语法规范和错误。
-1.  [lint-staged](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fokonet%2Flint-staged "https://github.com/okonet/lint-staged"): 只检测暂存区文件代码，优化eslint检测速度。
+1.  [vscode](http://vscode.bianjiqi.net/)：统一前端编辑器。
+1.  [editorconfig](https://editorconfig.org/): 统一团队vscode编辑器默认配置。
+1.  [prettier](https://www.prettier.cn/): 保存文件自动格式化代码。
+1.  [eslint](https://eslint.bootcss.com/): 检测代码语法规范和错误。
+1.  [lint-staged](https://github.com/okonet/lint-staged): 只检测暂存区文件代码，优化eslint检测速度。
 
 ### 2.2 代码git提交规范
 
-1.  [husky](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Ftypicode%2Fhusky "https://github.com/typicode/husky"):可以监听[githooks](https://link.juejin.cn?target=https%3A%2F%2Fgit-scm.com%2Fbook%2Fzh%2Fv2%2F%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589-Git-Git-%25E9%2592%25A9%25E5%25AD%2590 "https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90")执行，在对应hook执行阶段做一些处理的操作。
-1.  [pre-commit](https://link.juejin.cn?target=https%3A%2F%2Fgit-scm.com%2Fbook%2Fzh%2Fv2%2F%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589-Git-Git-%25E9%2592%25A9%25E5%25AD%2590 "https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90")：githooks之一， 在commit提交前使用tsc和eslint对语法进行检测。
-1.  [commit-msg](https://link.juejin.cn?target=https%3A%2F%2Fgit-scm.com%2Fbook%2Fzh%2Fv2%2F%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589-Git-Git-%25E9%2592%25A9%25E5%25AD%2590 "https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90")：githooks之一，在commit提交前对commit备注信息进行检测。
-1.  [commitlint](https://link.juejin.cn?target=https%3A%2F%2Fcommitlint.js.org%2F%23%2F "https://commitlint.js.org/#/")：在githooks的pre-commit阶段对commit备注信息进行检测。
-1.  [commitizen](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fcommitizen%2Fcz-cli "https://github.com/commitizen/cz-cli")：git的规范化提交工具，辅助填写commit信息。
+1.  [husky](https://github.com/typicode/husky):可以监听[githooks](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90)执行，在对应hook执行阶段做一些处理的操作。
+1.  [pre-commit](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90)：githooks之一， 在commit提交前使用tsc和eslint对语法进行检测。
+1.  [commit-msg](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90)：githooks之一，在commit提交前对commit备注信息进行检测。
+1.  [commitlint](https://commitlint.js.org/#/)：在githooks的pre-commit阶段对commit备注信息进行检测。
+1.  [commitizen](https://github.com/commitizen/cz-cli)：git的规范化提交工具，辅助填写commit信息。
 
 
 ## 三.  初始化项目
@@ -449,7 +449,7 @@ export default [
 
 #### 1.看**App.tsx**页面会发现**jsx**部分有红色报红，提示 **'React' must be in scope when using JSX**
 
-这是因为**React18**版本中使用**jsx**语法不需要再引入**React**了，根据[eslint-plugin-react](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fjsx-eslint%2Feslint-plugin-react%2Fblob%2Fmaster%2Fdocs%2Frules%2Freact-in-jsx-scope.md "https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md")中的说明，如果使用了**react17**版本以上，不需要在使用**jsx**页面引入**React**时，在**eslint**配置文件添加插件**plugin:react/jsx-runtime**。
+这是因为**React18**版本中使用**jsx**语法不需要再引入**React**了，根据[eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md)中的说明，如果使用了**react17**版本以上，不需要在使用**jsx**页面引入**React**时，在**eslint**配置文件添加插件**plugin:react/jsx-runtime**。
 
 ```js
 import jsx from 'react/jsx-runtime'
@@ -622,7 +622,7 @@ npx lint-staged
 
 ## 九.commitlint
 
-在提交代码时，良好的提交备注会方便多人开发时其他人理解本次提交修改的大致内容，也方便后面维护迭代，但每个人习惯都不一样，需要用工具来做下限制，在**git**提供的一系列的[githooks](https://link.juejin.cn/?target=https%3A%2F%2Fgit-scm.com%2Fwomdocs%2Fgithooks "https://git-scm.com/womdocs/githooks") 中，**commit-msg**会在**git commit**之前执行，并获取到**git commit**的备注，可以通过这个钩子来验证备注是否合理，而验证是否合理肯定需要先定义一套规范，而[commitlint](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fconventional-changelog%2Fcommitlint "https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fconventional-changelog%2Fcommitlint")就是用来做这件事情的，它会预先定义一套规范，然后验证**git commit**的备注是否符合定义的规范。
+在提交代码时，良好的提交备注会方便多人开发时其他人理解本次提交修改的大致内容，也方便后面维护迭代，但每个人习惯都不一样，需要用工具来做下限制，在**git**提供的一系列的[githooks](https://git-scm.com/womdocs/githooks) 中，**commit-msg**会在**git commit**之前执行，并获取到**git commit**的备注，可以通过这个钩子来验证备注是否合理，而验证是否合理肯定需要先定义一套规范，而[commitlint](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fconventional-changelog%2Fcommitlint)就是用来做这件事情的，它会预先定义一套规范，然后验证**git commit**的备注是否符合定义的规范。
 
 ### 安装 commitlint 和 commitlint 配置 
 
@@ -731,7 +731,7 @@ module.exports = {
 
 **3. 配置loader解析ts和jsx**
 
-由于**webpack**默认只能识别**js**文件,不能识别**jsx**语法,需要配置**loader**的预设 [**@babel/preset-typescript**](https://link.juejin.cn?target=https%3A%2F%2Fwww.babeljs.cn%2Fdocs%2Fbabel-preset-typescript "https://www.babeljs.cn/docs/babel-preset-typescript") 来先**ts**语法转换为 **js** 语法,再借助预设 [**@babel/preset-react**](https://link.juejin.cn?target=https%3A%2F%2Fwww.babeljs.cn%2Fdocs%2Fbabel-preset-react "https://www.babeljs.cn/docs/babel-preset-react") 来识别**jsx**语法。
+由于**webpack**默认只能识别**js**文件,不能识别**jsx**语法,需要配置**loader**的预设 [**@babel/preset-typescript**](https://www.babeljs.cn/docs/babel-preset-typescript) 来先**ts**语法转换为 **js** 语法,再借助预设 [**@babel/preset-react**](https://www.babeljs.cn/docs/babel-preset-react) 来识别**jsx**语法。
 
 **安装babel核心模块和babel预设**
 
@@ -785,7 +785,7 @@ module.exports = {
 
 **4. 添加html-webpack-plugin插件**
 
-**webpack**需要把最终构建好的静态资源都引入到一个**html**文件中,这样才能在浏览器中运行,[html-webpack-plugin](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fhtml-webpack-plugin "https://www.npmjs.com/package/html-webpack-plugin")就是来做这件事情的,安装依赖：
+**webpack**需要把最终构建好的静态资源都引入到一个**html**文件中,这样才能在浏览器中运行,[html-webpack-plugin](https://www.npmjs.com/package/html-webpack-plugin)就是来做这件事情的,安装依赖：
 
 ```sh
 npm i html-webpack-plugin -D
@@ -815,7 +815,7 @@ module.exports = {
 
 **1. 安装 webpack-dev-server**
 
-开发环境配置代码在**webpack.dev.js**中,需要借助 [webpack-dev-server](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fwebpack-dev-server "https://www.npmjs.com/package/webpack-dev-server")在开发环境启动服务器来辅助开发,还需要依赖[webpack-merge](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fwebpack-merge "https://www.npmjs.com/package/webpack-merge")来合并基本配置,安装依赖:
+开发环境配置代码在**webpack.dev.js**中,需要借助 [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)在开发环境启动服务器来辅助开发,还需要依赖[webpack-merge](https://www.npmjs.com/package/webpack-merge)来合并基本配置,安装依赖:
 
 ```sh
 npm i webpack-dev-server webpack-merge -D
@@ -917,7 +917,7 @@ npm i serve -g
 
 区分开发模式还是打包构建模式可以用**process.env.NODE_ENV**,因为很多第三方包里面判断都是采用的这个环境变量。
 
-区分项目接口环境可以自定义一个环境变量**process.env.BASE_ENV**,设置环境变量可以借助[cross-env](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fcross-env "https://www.npmjs.com/package/cross-env")和[webpack.DefinePlugin](https://link.juejin.cn?target=https%3A%2F%2Fwww.webpackjs.com%2Fplugins%2Fdefine-plugin%2F "https://www.webpackjs.com/plugins/define-plugin/")来设置。
+区分项目接口环境可以自定义一个环境变量**process.env.BASE_ENV**,设置环境变量可以借助[cross-env](https://www.npmjs.com/package/cross-env)和[webpack.DefinePlugin](https://www.webpackjs.com/plugins/define-plugin/)来设置。
 
 -   **cross-env**：兼容各系统的设置环境变量的包
 -   **webpack.DefinePlugin**：**webpack**内置的插件,可以为业务代码注入环境变量
@@ -1104,7 +1104,7 @@ module.exports = {
 
 ### 11.4 处理css3前缀兼容
 
-虽然**css3**现在浏览器支持率已经很高了, 但有时候需要兼容一些低版本浏览器,需要给**css3**加前缀,可以借助插件来自动加前缀, [postcss-loader](https://link.juejin.cn/?target=https%3A%2F%2Fwebpack.docschina.org%2Floaders%2Fpostcss-loader%2F "https://link.juejin.cn/?target=https%3A%2F%2Fwebpack.docschina.org%2Floaders%2Fpostcss-loader%2F")就是来给**css3**加浏览器前缀的,安装依赖：
+虽然**css3**现在浏览器支持率已经很高了, 但有时候需要兼容一些低版本浏览器,需要给**css3**加前缀,可以借助插件来自动加前缀, [postcss-loader](https://link.juejin.cn/?target=https%3A%2F%2Fwebpack.docschina.org%2Floaders%2Fpostcss-loader%2F)就是来给**css3**加浏览器前缀的,安装依赖：
 
 ```sh
 npm i postcss-loader autoprefixer -D
@@ -1153,9 +1153,6 @@ chrome 35 # 兼容chrome 35
 
 以兼容到**ie9**和**chrome35**版本为例,配置好后,执行**npm run build:dev**打包,可以看到打包后的**css**文件已经加上了**ie**和谷歌内核的前缀
 
-
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/49e4afdd160b4cc1a8684f2b81c536d1~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5Y2X5ri4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTcyODg3MjAwMzk0MzY4OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1734485390&x-orig-sign=2z1ODyzvN2D7FZmb2VFlOYabL3M%3D)
-
 上面可以看到解析**css**和**scss**有很多重复配置,可以进行提取**postcss-loader**配置优化一下
 
 **postcss.config.js**是**postcss-loader**的配置文件,会自动读取配置,根目录新建**postcss.config.js**：
@@ -1195,7 +1192,7 @@ module.exports = {
 
 ### 11.5 babel预设处理js兼容
 
-现在**js**不断新增很多方便好用的标准语法来方便开发,甚至还有非标准语法比如装饰器,都极大的提升了代码可读性和开发效率。但前者标准语法很多低版本浏览器不支持,后者非标准语法所有的浏览器都不支持。需要把最新的标准语法转换为低版本语法,把非标准语法转换为标准语法才能让浏览器识别解析,而**babel**就是来做这件事的,这里只讲配置,更详细的可以看[Babel 那些事儿](https://juejin.cn/post/6992371845349507108 "https://juejin.cn/post/6992371845349507108")。
+现在**js**不断新增很多方便好用的标准语法来方便开发,甚至还有非标准语法比如装饰器,都极大的提升了代码可读性和开发效率。但前者标准语法很多低版本浏览器不支持,后者非标准语法所有的浏览器都不支持。需要把最新的标准语法转换为低版本语法,把非标准语法转换为标准语法才能让浏览器识别解析,而**babel**就是来做这件事的,这里只讲配置,更详细的可以看[Babel 那些事儿](https://juejin.cn/post/6992371845349507108)。
 
 安装依赖
 
@@ -1359,7 +1356,7 @@ module.exports = {
 
 ### 11.7 复制public文件夹
 
-一般**public**文件夹都会放一些静态资源,可以直接根据绝对路径引入,比如**图片**,**css**,**js**文件等,不需要**webpack**进行解析,只需要打包的时候把**public**下内容复制到构建出口文件夹中,可以借助[copy-webpack-plugin](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fcopy-webpack-plugin "https://www.npmjs.com/package/copy-webpack-plugin")插件,安装依赖
+一般**public**文件夹都会放一些静态资源,可以直接根据绝对路径引入,比如**图片**,**css**,**js**文件等,不需要**webpack**进行解析,只需要打包的时候把**public**下内容复制到构建出口文件夹中,可以借助[copy-webpack-plugin](https://www.npmjs.com/package/copy-webpack-plugin)插件,安装依赖
 
 ```sh
 npm i copy-webpack-plugin -D
@@ -1393,7 +1390,7 @@ module.exports = merge(baseConfig, {
 
 在上面的配置中,忽略了**index.html**,因为**html-webpack-plugin**会以**public**下的**index.html**为模板生成一个**index.html**到**dist**文件下,所以不需要再复制该文件了。
 
-测试一下,在**public**中新增一个[**favicon.ico**](https://link.juejin.cn?target=https%3A%2F%2Fguojiongwei.top%2Ffavicon.ico "https://guojiongwei.top/favicon.ico")图标文件,在**index.html**中引入
+测试一下,在**public**中新增一个[**favicon.ico**](https://guojiongwei.top/favicon.ico)图标文件,在**index.html**中引入
 
 ```html
 <!DOCTYPE html>
@@ -1417,7 +1414,7 @@ module.exports = merge(baseConfig, {
 
 ### 11.8 处理图片文件
 
-对于图片文件,**webpack4**使用**file-loader**和**url-loader**来处理的,但**webpack5**不使用这两个**loader**了,而是采用自带的[**asset-module**](https://link.juejin.cn?target=https%3A%2F%2Fwebpack.js.org%2Fguides%2Fasset-modules%2F%23root "https://webpack.js.org/guides/asset-modules/#root")来处理
+对于图片文件,**webpack4**使用**file-loader**和**url-loader**来处理的,但**webpack5**不使用这两个**loader**了,而是采用自带的[**asset-module**](https://webpack.js.org/guides/asset-modules/#root)来处理
 
 修改**webpack.base.js**,添加图片解析配置
 
@@ -1567,7 +1564,7 @@ module.exports = {
 
 现在开发模式下修改**css**和**scss**文件，页面样式可以在不刷新浏览器的情况实时生效，因为此时样式都在**style**标签里面，**style-loader**做了替换样式的热替换功能。但是修改**App.tsx**,浏览器会自动刷新后再显示修改后的内容,但我们想要的不是刷新浏览器,而是在不需要刷新浏览器的前提下模块热更新,并且能够保留**react**组件的状态。
 
-可以借助[@pmmmwh/react-refresh-webpack-plugin](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40pmmmwh%2Freact-refresh-webpack-plugin "https://www.npmjs.com/package/@pmmmwh/react-refresh-webpack-plugin")插件来实现,该插件又依赖于[react-refresh](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Freact-refresh "https://www.npmjs.com/package/react-refresh"), 安装依赖：
+可以借助[@pmmmwh/react-refresh-webpack-plugin](https://www.npmjs.com/package/@pmmmwh/react-refresh-webpack-plugin)插件来实现,该插件又依赖于[react-refresh](https://www.npmjs.com/package/react-refresh), 安装依赖：
 
 ```sh
 npm i @pmmmwh/react-refresh-webpack-plugin react-refresh -D
@@ -1633,7 +1630,7 @@ export default App
 
 ### 13.1 构建耗时分析
 
-当进行优化的时候,肯定要先知道时间都花费在哪些步骤上了,而[speed-measure-webpack-plugin](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fspeed-measure-webpack-plugin "https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fspeed-measure-webpack-plugin")插件可以帮我们做到,安装依赖：
+当进行优化的时候,肯定要先知道时间都花费在哪些步骤上了,而[speed-measure-webpack-plugin](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fspeed-measure-webpack-plugin)插件可以帮我们做到,安装依赖：
 
 ```sh
 npm i speed-measure-webpack-plugin -D
@@ -1674,7 +1671,7 @@ module.exports = smp.wrap(merge(prodConfig, {
 
 在**webpack5**之前做缓存是使用**babel-loader**缓存解决**js**的解析结果,**cache-loader**缓存**css**等资源的解析结果,还有模块缓存插件**hard-source-webpack-plugin**,配置好缓存后第二次打包,通过对文件做哈希对比来验证文件前后是否一致,如果一致则采用上一次的缓存,可以极大地节省时间。
 
-**webpack5** 较于 **webpack4**,新增了持久化缓存、改进缓存算法等优化,通过配置 [webpack 持久化缓存](https://link.juejin.cn?target=https%253A%252F%252Fwebpack.docschina.org%252Fconfiguration%252Fcache%252F%2523root "https%3A%2F%2Fwebpack.docschina.org%2Fconfiguration%2Fcache%2F%23root"),来缓存生成的 **webpack** 模块和 **chunk**,改善下一次打包的构建速度,可提速 **90%** 左右,配置也简单，修改**webpack.base.js**
+**webpack5** 较于 **webpack4**,新增了持久化缓存、改进缓存算法等优化,通过配置 [webpack 持久化缓存](https%3A%2F%2Fwebpack.docschina.org%2Fconfiguration%2Fcache%2F%23root),来缓存生成的 **webpack** 模块和 **chunk**,改善下一次打包的构建速度,可提速 **90%** 左右,配置也简单，修改**webpack.base.js**
 
 ```js
 
@@ -1701,7 +1698,7 @@ module.exports = {
 
 ### 13.3 开启多线程loader
 
-**webpack**的**loader**默认在单线程执行,现代电脑一般都有多核**cpu**,可以借助多核**cpu**开启多线程**loader**解析,可以极大地提升**loader**解析的速度,[thread-loader](https://link.juejin.cn/?target=https%3A%2F%2Fwebpack.docschina.org%2Floaders%2Fthread-loader%2F%23root "https://link.juejin.cn/?target=https%3A%2F%2Fwebpack.docschina.org%2Floaders%2Fthread-loader%2F%23root")就是用来开启多进程解析**loader**的,安装依赖
+**webpack**的**loader**默认在单线程执行,现代电脑一般都有多核**cpu**,可以借助多核**cpu**开启多线程**loader**解析,可以极大地提升**loader**解析的速度,[thread-loader](https://link.juejin.cn/?target=https%3A%2F%2Fwebpack.docschina.org%2Floaders%2Fthread-loader%2F%23root)就是用来开启多进程解析**loader**的,安装依赖
 
 ```sh
 npm i thread-loader -D
@@ -1901,7 +1898,7 @@ module.exports = {
 
 ### 13 .8 devtool 配置
 
-开发过程中或者打包后的代码都是**webpack**处理后的代码,如果进行调试肯定希望看到源代码,而不是编译后的代码, [source map](https://link.juejin.cn?target=http%3A%2F%2Fblog.teamtreehouse.com%2Fintroduction-source-maps "http://blog.teamtreehouse.com/introduction-source-maps")就是用来做源码映射的,不同的映射模式会明显影响到构建和重新构建的速度, [**devtool**](https://link.juejin.cn?target=https%3A%2F%2Fwebpack.js.org%2Fconfiguration%2Fdevtool%2F "https://webpack.js.org/configuration/devtool/")选项就是**webpack**提供的选择源码映射方式的配置。
+开发过程中或者打包后的代码都是**webpack**处理后的代码,如果进行调试肯定希望看到源代码,而不是编译后的代码, [source map](http://blog.teamtreehouse.com/introduction-source-maps)就是用来做源码映射的,不同的映射模式会明显影响到构建和重新构建的速度, [**devtool**](https://webpack.js.org/configuration/devtool/)选项就是**webpack**提供的选择源码映射方式的配置。
 
 **devtool**的命名规则为 **^(inline-|hidden-|eval-)?(nosources-)?(cheap-(module-)?)?source-map$**
 
@@ -1947,15 +1944,15 @@ module.exports = {
 
 除了上面的配置外，**webpack**还提供了其他的一些优化方式,本次搭建没有使用到，所以只简单罗列下
 
--   [**externals**](https://link.juejin.cn?target=https%3A%2F%2Fwww.webpackjs.com%2Fconfiguration%2Fexternals%2F "https://www.webpackjs.com/configuration/externals/"): 外包拓展，打包时会忽略配置的依赖，会从上下文中寻找对应变量
--   [**module.noParse**](https://link.juejin.cn?target=https%3A%2F%2Fwww.webpackjs.com%2Fconfiguration%2Fmodule%2F%23module-noparse "https://www.webpackjs.com/configuration/module/#module-noparse"): 匹配到设置的模块,将不进行依赖解析，适合**jquery**,**boostrap**这类不依赖外部模块的包
--   [**ignorePlugin**](https://link.juejin.cn?target=https%3A%2F%2Fwebpack.js.org%2Fplugins%2Fignore-plugin%2F%23root "https://webpack.js.org/plugins/ignore-plugin/#root"): 可以使用正则忽略一部分文件，常在使用多语言的包时可以把非中文语言包过滤掉
+-   [**externals**](https://www.webpackjs.com/configuration/externals/): 外包拓展，打包时会忽略配置的依赖，会从上下文中寻找对应变量
+-   [**module.noParse**](hhttps://www.webpackjs.com/configuration/module/#module-noparse): 匹配到设置的模块,将不进行依赖解析，适合**jquery**,**boostrap**这类不依赖外部模块的包
+-   [**ignorePlugin**](https://webpack.js.org/plugins/ignore-plugin/#root): 可以使用正则忽略一部分文件，常在使用多语言的包时可以把非中文语言包过滤掉
 
 
 
 ## 十四. 优化构建结果文件
 
-[webpack-bundle-analyzer](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fwebpack-bundle-analyzer "https://www.npmjs.com/package/webpack-bundle-analyzer")是分析**webpack**打包后文件的插件,使用交互式可缩放树形图可视化 **webpack** 输出文件的大小。通过该插件可以对打包后的文件进行观察和分析,可以方便我们对不完美的地方针对性的优化,安装依赖：
+[webpack-bundle-analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer)是分析**webpack**打包后文件的插件,使用交互式可缩放树形图可视化 **webpack** 输出文件的大小。通过该插件可以对打包后的文件进行观察和分析,可以方便我们对不完美的地方针对性的优化,安装依赖：
 
 ```sh
 npm install webpack-bundle-analyzer -D
@@ -1981,7 +1978,7 @@ module.exports = smp.wrap(merge(prodConfig, {
 
 ### 14.1 抽取css样式文件
 
-在开发环境我们希望**css**嵌入在**style**标签里面,方便样式热替换,但打包时我们希望把**css**单独抽离出来,方便配置缓存策略。而插件[mini-css-extract-plugin](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fwebpack-contrib%2Fmini-css-extract-plugin "https://github.com/webpack-contrib/mini-css-extract-plugin")就是来帮我们做这件事的,安装依赖：
+在开发环境我们希望**css**嵌入在**style**标签里面,方便样式热替换,但打包时我们希望把**css**单独抽离出来,方便配置缓存策略。而插件[mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)就是来帮我们做这件事的,安装依赖：
 
 ```sh
 npm i mini-css-extract-plugin -D
@@ -2048,13 +2045,13 @@ module.exports = merge(baseConfig, {
 
 上面配置了打包时把**css**抽离为单独**css**文件的配置,打开打包后的文件查看,可以看到默认**css**是没有压缩的,需要手动配置一下压缩**css**的插件。
 
-可以借助[css-minimizer-webpack-plugin](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fcss-minimizer-webpack-plugin "https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fcss-minimizer-webpack-plugin")来压缩css,安装依赖
+可以借助[css-minimizer-webpack-plugin](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fcss-minimizer-webpack-plugin)来压缩css,安装依赖
 
 ```sh
 npm i css-minimizer-webpack-plugin -D
 ```
 
-修改**webpack.prod.js**文件， 需要在优化项[optimization](https://link.juejin.cn?target=https%3A%2F%2Fwebpack.js.org%2Fconfiguration%2Foptimization%2F "https://webpack.js.org/configuration/optimization/")下的[minimizer](https://link.juejin.cn?target=https%3A%2F%2Fwebpack.js.org%2Fconfiguration%2Foptimization%2F%23optimizationminimizer "https://webpack.js.org/configuration/optimization/#optimizationminimizer")属性中配置
+修改**webpack.prod.js**文件， 需要在优化项[optimization](https://webpack.js.org/configuration/optimization/)下的[minimizer](https://webpack.js.org/configuration/optimization/#optimizationminimizer)属性中配置
 
 ```js
 // webpack.prod.js
@@ -2074,7 +2071,7 @@ module.exports = {
 
 ### 14.3 压缩js文件
 
-设置**mode**为**production**时,**webpack**会使用内置插件[terser-webpack-plugin](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fterser-webpack-plugin "https://www.npmjs.com/package/terser-webpack-plugin")压缩**js**文件,该插件默认支持多线程压缩,但是上面配置**optimization.minimizer**压缩**css**后,**js**压缩就失效了,需要手动再添加一下,**webpack**内部安装了该插件,由于**pnpm**解决了幽灵依赖问题,如果用的**pnpm**的话,需要手动再安装一下依赖。
+设置**mode**为**production**时,**webpack**会使用内置插件[terser-webpack-plugin](https://www.npmjs.com/package/terser-webpack-plugin)压缩**js**文件,该插件默认支持多线程压缩,但是上面配置**optimization.minimizer**压缩**css**后,**js**压缩就失效了,需要手动再添加一下,**webpack**内部安装了该插件,由于**pnpm**解决了幽灵依赖问题,如果用的**pnpm**的话,需要手动再安装一下依赖。
 
 ```sh
 npm i terser-webpack-plugin -D
@@ -2192,7 +2189,7 @@ module.exports = merge(baseConfig, {
 
 ### 14.5 代码分割第三方包和公共模块
 
-一般第三方包的代码变化频率比较小,可以单独把**node_modules**中的代码单独打包, 当第三包代码没变化时,对应**chunkhash**值也不会变化,可以有效利用浏览器缓存，还有公共的模块也可以提取出来,避免重复打包加大代码整体体积, **webpack**提供了代码分隔功能, 需要我们手动在优化项[optimization](https://link.juejin.cn?target=https%3A%2F%2Fwebpack.js.org%2Fconfiguration%2Foptimization%2F "https://webpack.js.org/configuration/optimization/")中手动配置下代码分隔[splitChunks](https://link.juejin.cn?target=https%3A%2F%2Fwebpack.js.org%2Fconfiguration%2Foptimization%2F%23optimizationsplitchunks "https://webpack.js.org/configuration/optimization/#optimizationsplitchunks")规则。
+一般第三方包的代码变化频率比较小,可以单独把**node_modules**中的代码单独打包, 当第三包代码没变化时,对应**chunkhash**值也不会变化,可以有效利用浏览器缓存，还有公共的模块也可以提取出来,避免重复打包加大代码整体体积, **webpack**提供了代码分隔功能, 需要我们手动在优化项[optimization](https://webpack.js.org/configuration/optimization/)中手动配置下代码分隔[splitChunks](https://webpack.js.org/configuration/optimization/#optimizationsplitchunks)规则。
 
 修改**webpack.prod.js**
 
@@ -2229,7 +2226,7 @@ module.exports = {
 
 ### 14.6 tree-shaking清理未引用js
 
-[Tree Shaking](https://link.juejin.cn/?target=https%3A%2F%2Fwebpack.docschina.org%2Fguides%2Ftree-shaking%2F "https://link.juejin.cn/?target=https%3A%2F%2Fwebpack.docschina.org%2Fguides%2Ftree-shaking%2F")的意思就是摇树,伴随着摇树这个动作,树上的枯叶都会被摇晃下来,这里的**tree-shaking**在代码中摇掉的是未使用到的代码,也就是未引用的代码,最早是在**rollup**库中出现的,**webpack**在**2**版本之后也开始支持。模式**mode**为**production**时就会默认开启**tree-shaking**功能以此来标记未引入代码然后移除掉,测试一下。
+[Tree Shaking](https://link.juejin.cn/?target=https%3A%2F%2Fwebpack.docschina.org%2Fguides%2Ftree-shaking%2F)的意思就是摇树,伴随着摇树这个动作,树上的枯叶都会被摇晃下来,这里的**tree-shaking**在代码中摇掉的是未使用到的代码,也就是未引用的代码,最早是在**rollup**库中出现的,**webpack**在**2**版本之后也开始支持。模式**mode**为**production**时就会默认开启**tree-shaking**功能以此来标记未引入代码然后移除掉,测试一下。
 
 在**src/components**目录下新增**Demo1**,**Demo2**两个组件
 
@@ -2273,7 +2270,7 @@ export default App
 
 ### 14.7 tree-shaking清理未使用css
 
-**js**中会有未使用到的代码,**css**中也会有未被页面使用到的样式,可以通过[purgecss-webpack-plugin](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fpurgecss-webpack-plugin "https://www.npmjs.com/package/purgecss-webpack-plugin")插件打包的时候移除未使用到的**css**样式,这个插件是和[mini-css-extract-plugin](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fmini-css-extract-plugin "https://www.npmjs.com/package/mini-css-extract-plugin")插件配合使用的,在上面已经安装过,还需要[**glob-all**](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fglob-all "https://www.npmjs.com/package/glob-all")来选择要检测哪些文件里面的类名和**id**还有标签名称, 安装依赖:
+**js**中会有未使用到的代码,**css**中也会有未被页面使用到的样式,可以通过[purgecss-webpack-plugin](https://www.npmjs.com/package/purgecss-webpack-plugin)插件打包的时候移除未使用到的**css**样式,这个插件是和[mini-css-extract-plugin](https://www.npmjs.com/package/mini-css-extract-plugin)插件配合使用的,在上面已经安装过,还需要[**glob-all**](https://www.npmjs.com/package/glob-all)来选择要检测哪些文件里面的类名和**id**还有标签名称, 安装依赖:
 
 ```sh
 npm i purgecss-webpack-plugin@4 glob -D
@@ -2352,7 +2349,7 @@ export default App
 
 但是**purgecss-webpack-plugin**插件不是全能的,由于项目业务代码的复杂,插件不能百分百识别哪些样式用到了,哪些没用到,所以请不要寄希望于它能够百分百完美解决你的问题,这个是不现实的。
 
-插件本身也提供了一些白名单**safelist**属性,符合配置规则选择器都不会被删除掉,比如使用了组件库[antd](https://link.juejin.cn?target=https%3A%2F%2Fant.design%2F "https://ant.design/"), **purgecss-webpack-plugin**插件检测**src**文件下**tsx**文件中使用的类名和**id**时,是检测不到在**src**中使用**antd**组件的类名的,打包的时候就会把**antd**的类名都给过滤掉,可以配置一下安全选择列表,避免删除**antd**组件库的前缀**ant**。
+插件本身也提供了一些白名单**safelist**属性,符合配置规则选择器都不会被删除掉,比如使用了组件库[antd](https://ant.design/), **purgecss-webpack-plugin**插件检测**src**文件下**tsx**文件中使用的类名和**id**时,是检测不到在**src**中使用**antd**组件的类名的,打包的时候就会把**antd**的类名都给过滤掉,可以配置一下安全选择列表,避免删除**antd**组件库的前缀**ant**。
 
 ```js
 new PurgeCSSPlugin({
@@ -2419,7 +2416,7 @@ export default App
 
 对于当前页面很有必要的资源使用 **preload** ,对于可能在将来的页面中使用的资源使用 **prefetch**。
 
-**webpack v4.6.0+** 增加了对[预获取和预加载](https://link.juejin.cn?target=https%3A%2F%2Fwebpack.docschina.org%2Fguides%2Fcode-splitting%2F%23prefetchingpreloading-modules "https://webpack.docschina.org/guides/code-splitting/#prefetchingpreloading-modules")的支持,使用方式也比较简单,在**import**引入动态资源时使用**webpack**的魔法注释
+**webpack v4.6.0+** 增加了对[预获取和预加载](https://webpack.docschina.org/guides/code-splitting/#prefetchingpreloading-modules)的支持,使用方式也比较简单,在**import**引入动态资源时使用**webpack**的魔法注释
 
 ```js
 // 单个目标
@@ -2499,7 +2496,7 @@ export default App
 
 **nginx**可以配置**gzip: on**来开启压缩,但是只在**nginx**层面开启,会在每次请求资源时都对资源进行压缩,压缩文件会需要时间和占用服务器**cpu**资源，更好的方式是前端在打包的时候直接生成**gzip**资源,服务器接收到请求,可以直接把对应压缩好的**gzip**文件返回给浏览器,节省时间和**cpu**。
 
-**webpack**可以借助[compression-webpack-plugin](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fcompression-webpack-plugin "https://www.npmjs.com/package/compression-webpack-plugin") 插件在打包时生成 **gzip** 文章,安装依赖
+**webpack**可以借助[compression-webpack-plugin](https://www.npmjs.com/package/compression-webpack-plugin) 插件在打包时生成 **gzip** 文章,安装依赖
 
 ```sh
 npm i compression-webpack-plugin -D
